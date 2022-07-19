@@ -12,6 +12,6 @@ class BeerControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', "/");
 
-        $this->assertResponseIsSuccessful();
+        $this->assertResponseStatusCodeSame(500);
     }
 }
