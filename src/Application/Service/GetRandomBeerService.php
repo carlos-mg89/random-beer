@@ -2,6 +2,7 @@
 
 namespace App\Application\Service;
 
+use App\Domain\Model\Beer\Entity\Beer;
 use App\Domain\Model\Beer\Exception\BeerNotFoundException;
 use App\Domain\Model\Beer\Repository\BeerRepositoryInterface;
 
@@ -17,12 +18,14 @@ class GetRandomBeerService
     /**
      * @throws BeerNotFoundException
      */
-    public function execute(): void
+    public function execute(): Beer
     {
         $randomBeer = $this->beerRepository->findRandom();
 
         if (null == $randomBeer) {
             throw new BeerNotFoundException();
         }
+
+        return $randomBeer;
     }
 }
