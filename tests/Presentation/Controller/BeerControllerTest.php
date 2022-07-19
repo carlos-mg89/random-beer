@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Tests\Presentation\Controller;
+
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class BeerControllerTest extends WebTestCase
