@@ -1,4 +1,4 @@
-Vending machine - Backend challenge
+Random beer app
 ===================================
 
 ## Requirements
