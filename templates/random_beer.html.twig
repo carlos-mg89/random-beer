@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="header">
+        <h1>Rendering Random beer Twig template</h1>
+
+        <div class="actions">
+            <a class="btn btn-primary" href="{{ path('random_beer') }}">Show another beer</a>
+        </div>
+    </div>
+
+    <div class="beer">
+        <h2>Name: {{ response.beer.name }}</h2>
+        <p>Description: {{ response.beer.description }}</p>
+        <p>Alcohol percentage: {{ response.beer.alcoholPercentage }}</p>
+        <p>Location: {{ response.beer.breweryLocation }}</p>
+    </div>
+{% endblock %}

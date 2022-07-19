@@ -22,6 +22,10 @@ class DoctrineBeerRepository extends ServiceEntityRepository implements BeerRepo
 
     public function findRandom(): ?Beer
     {
-        return null;
+        return $this->createQueryBuilder('beer')
+            ->orderBy('rand()')
+            ->getQuery()
+            ->setMaxResults(1)
+            ->getResult()[0];
     }
 }
